@@ -20,3 +20,20 @@ print(doubleOrDiff(a,c))
 print(doubleOrDiff(b,c))
 print(a)
 print(b)
+def Asin(x):
+  if abs(x)>1:
+    return "error, no arcsine exists"
+  if x==0:
+    return 0
+  else:
+    c= 2*pow((1-pow((1-x*x),1/2))/2,1/2)
+    if  x>0:
+      if sin (c) == x:
+        return c
+      else: 
+        return "error, math failed"
+    else:
+      if sin (c) == -x:
+        return -c
+      else:
+        return "error, math failed"
