@@ -47,3 +47,19 @@ def AsinDU(x,t,a):
   else:
     a+=math.sqrt(1-((t/4)*(t/4)))
     return AsinDU(x,t,a)
+def binsort(L,val):
+  if L[L.len]==val:
+    return L.len
+  if L[0]==val:
+    return 0
+  i=L.len/2
+  top=L.len
+  bottom=0
+  while (L[i]!=val):
+    if L[i]<val:
+      bottom=i
+      i+=(top-i)//2
+    if L[i]>val:
+      top=i
+      i-=(bottom+i)//2
+  return i
