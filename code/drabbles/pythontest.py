@@ -63,3 +63,4 @@ def binsort(L,val):
       top=i
       i-=(bottom+i)//2
   return i
+print(Asin(.5,.0001))
